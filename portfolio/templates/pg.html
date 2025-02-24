@@ -1,0 +1,13 @@
+{% comment %} {% regroup projects|dictsort:"Pcategory" by Pcategory as newlist %}
+{% for project in newlist %}
+<h1>{{project}}</h1>
+{% for pro in project.list %}
+<h4>{{pro.Ptitle}}</h1>
+<h4>{{pro.Pcategory}}</h1>
+<h4>{{pro.Pdescription}}</h1>
+<h4>{{pro.Pimage.url}}</h1>
+<h4>{{pro.Pproject_url}}</h1>
+
+{% endfor %}
+{% endfor %} {% endcomment %}
+<h1>{{about.Aaddress|slice:":5"}}</h1>
